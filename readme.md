@@ -142,7 +142,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 1. <a name="whitespace">Whitespace</a>
   - Never mix spaces and tabs.
   - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
-      - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
+      - For readability, I always recommend setting your editor's indent size to four characters &mdash; this means four spaces or four spaces representing a real tab.
   - If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
       - Enforced consistency
       - Eliminating end of line whitespace
@@ -1207,35 +1207,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     delegator();
     // [ "Default", 0 ]
 
-
-    ```
-
-    B. Early returns promote code readability with negligible performance difference
-
-    ```javascript
-
-    // 7.B.1.1
-    // Bad:
-    function returnLate( foo ) {
-      var ret;
-
-      if ( foo ) {
-        ret = "foo";
-      } else {
-        ret = "quux";
-      }
-      return ret;
-    }
-
-    // Good:
-
-    function returnEarly( foo ) {
-
-      if ( foo ) {
-        return "foo";
-      }
-      return "quux";
-    }
 
     ```
 
