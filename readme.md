@@ -186,8 +186,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     // Even better:
 
-    var i,
-      length = 100;
+    var i
+      , length = 100;
 
     for ( i = 0; i < length; i++ ) {
       // statements
@@ -195,8 +195,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     // Or...
 
-    var i = 0,
-      length = 100;
+    var i = 0
+      , length = 100;
 
     for ( ; i < length; i++ ) {
       // statements
@@ -223,13 +223,13 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     // 2.B.1.1
     // Variables
-    var foo = "bar",
-      num = 1,
-      undef;
+    var foo = "bar"
+      , num = 1
+      , undef;
 
     // Literal notations:
-    var array = [],
-      object = {};
+    var array = []
+      , object = {};
 
 
     // 2.B.1.2
@@ -241,16 +241,21 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     var bar = "";
     var qux;
 
-    // Good
+    //Also Bad
     var foo = "",
-      bar = "",
-      quux;
+        bar = "",
+        qux;
+
+    // Good
+    var foo = ""
+      , bar = ""
+      , quux;
 
     // or..
     var // Comment on these
-    foo = "",
-    bar = "",
-    quux;
+        foo = ""
+        , bar = "",
+        , quux;
 
     // 2.B.1.3
     // var statements should always be in the beginning of their respective scope (function).
@@ -261,14 +266,14 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
       // some statements here
 
-      var bar = "",
-        qux;
+      var bar = ""
+        , qux;
     }
 
     // Good
     function foo() {
-      var bar = "",
-        qux;
+      var bar = ""
+        , qux;
 
       // all statements after the variables declarations.
     }
@@ -357,8 +362,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // 2.C.1.2
     // Function accepting an object, no space
     foo({
-      a: "alpha",
-      b: "beta"
+      a: "alpha"
+      , b: "beta"
     });
 
     // Single argument string literal, no space
@@ -528,9 +533,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     // 3.B.2.1
 
-    var number = 1,
-      string = "1",
-      bool = false;
+    var number = 1
+      , string = "1"
+      , bool = false;
 
     number;
     // 1
@@ -564,9 +569,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```javascript
     // 3.B.2.2
 
-    var number = 1,
-      string = "1",
-      bool = true;
+    var number = 1
+      , string = "1"
+      , bool = true;
 
     string === number;
     // false
@@ -785,20 +790,20 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
         return {
           // This is some boolean property
-          bool: true,
+          bool: true
           // Some string value
-          string: "a string",
+          , string: "a string"
           // An array property
-          array: [ 1, 2, 3, 4 ],
+          , array: [ 1, 2, 3, 4 ]
           // An object property
-          object: {
+          , object: {
             lang: "en-Us"
-          },
-          getData: function() {
+          }
+          , getData: function() {
             // get the current value of `data`
             return data;
-          },
-          setData: function( value ) {
+          }
+          , setData: function( value ) {
             // set the value of `data` and return it
             return ( data = value );
           }
@@ -885,10 +890,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       return document.querySelectorAll( selector );
     }
 
-    var idx = 0,
-      elements = [],
-      matches = query("#foo"),
-      length = matches.length;
+    var idx = 0
+      , elements = []
+      , matches = query("#foo")
+      , length = matches.length;
 
     for ( ; idx < length; idx++ ) {
       elements.push( matches[ idx ] );
@@ -1215,7 +1220,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     The basic principle here is:
 
-    ### Don't do stupid shit and everything will be ok.
+    ### Don't do stupid stuff and everything will be ok.
 
     To reinforce this concept, please watch the following presentation:
 
